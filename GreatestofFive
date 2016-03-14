@@ -1,0 +1,49 @@
+/*
+Write a program that finds the greatest of given 5 variables.
+*/
+using System;
+
+class GreatestofFive
+{
+    static void Main()
+    {
+        Console.Write("Vyvedi a=");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedi b=");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedi c=");
+        int c = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedi c=");
+        int d = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedi c=");
+        int e = int.Parse(Console.ReadLine());
+        if ((a == b) && (a == c)&&(a==d)&&(a==e))
+        {
+            Console.WriteLine("Trite chisla sa ravni");
+        }
+        else
+        {
+            if (a > b && a > c && a > d && a > e)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e a={0}.", a);
+            }
+            else if (b > a && b > c && b>d && b>e)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e b={0}.", b);
+            }
+            else if (c > a && c > b && c>d && c>e)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e c={0}.", c);
+            }
+            else if (d > a && d > b && d > c && d > e)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e d={0}.", d);
+            }
+            else if (e > a && e > b && e > c && e > d)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e e={0}.", e);
+            }
+        }
+    }
+}
+
