@@ -1,0 +1,49 @@
+/*
+We are given 5 integer numbers. Write a program that checks if the sum of some subset of them is 0. Example: 3, -2, 1, 1, 8 -> 1+1-2=0.
+*/
+using System;
+
+class SumOfSubset
+{
+    static void Main()
+    {
+        int[] a = new int[5];
+        for (int i = 0; i < 5; i++)
+        {
+            Console.Write("Number {0}: ", i + 1);
+            a[i] = int.Parse(Console.ReadLine());
+        }
+        for (int i = 0; i < a.Length; i++)
+        {
+            if (a[i] == 0)
+            {
+                Console.WriteLine("( {0} )", 0);
+                break;
+            }
+        }
+        for (int i = 0; i < a.Length - 2; i++)
+        {
+            for (int j = i + 1; j < a.Length; j++)
+            {
+                if (a[i] + a[j] == 0)
+                {
+                    Console.WriteLine("( {0},{1} )", a[i], a[j]);
+                }
+                for (int m = j + 1; m < a.Length; m++)
+                {
+                    if (a[i] + a[j] + a[m] == 0)
+                    {
+                        Console.WriteLine("( {0},{1},{2} )", a[i], a[j], a[m]);
+                    }
+                    for (int n = m + 1; n < a.Length; n++)
+                    {
+                        if (a[i] + a[j] + a[m] + a[n] == 0)
+                        {
+                            Console.WriteLine("( {0},{1},{2},{3} )", a[i], a[j], a[m], a[n]);
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
