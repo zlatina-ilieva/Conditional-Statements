@@ -1,0 +1,38 @@
+/*
+Write a program that finds the biggest of three integers using nested if statements.
+*/
+using System;
+
+class BiggestOfTreeNestedIf
+{
+    static void Main()
+    {
+        Console.Write("Vyvedi a=");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedi b=");
+        int b = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedi c=");
+        int c = int.Parse(Console.ReadLine());
+        if ((a == b) && (a == c))
+        {
+            Console.WriteLine("Trite chisla sa ravni");
+        }
+        else
+        {
+            if (a > b && a > c)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e a={0}.", a);
+            }
+            else if (b > a && b > c)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e b={0}.", b);
+            }
+            else if (c > a && c > b)
+            {
+                Console.WriteLine("Nai-golqmoto chislo e c={0}.", c);
+            }
+        }
+    }
+}
+
+
