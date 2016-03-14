@@ -1,0 +1,33 @@
+/*
+Write a program that, depending on the user's choice inputs int, double or string variable. If the variable is integer or double, increases it with 1. If the variable is string, appends "*" at its end. The program must show the value of that variable as a console output. Use switch statement.
+*/
+using System;
+
+class UserChoiceInput
+{
+    static void Main()
+    {
+
+        Console.WriteLine("Za INT napishete \"0\", za DOUBLE napishete \"1\", za STRING napishete \"2\"");
+        Console.Write("Vyvedete svoq izbor:");
+        int input = int.Parse(Console.ReadLine());
+        switch (input)
+        {
+            case 0:
+                Console.Write("Vyvedete stoinost za INT:");
+                int inputInt = int.Parse(Console.ReadLine());
+                Console.WriteLine("Stoinostta na INT+1 e: {0}",inputInt+1);
+                break;
+            case 1 :
+                Console.Write("Vyvedete stoinost za DOUBLE:");
+                double inputDouble = double.Parse(Console.ReadLine());
+                Console.WriteLine("Stoinostta na DOUBLE+1 e: {0} ", inputDouble + 1);
+                break;
+            case 2 :
+                Console.Write("Vyvedete stoinost za STRING:");
+                string inputStr = (Console.ReadLine());
+                Console.WriteLine("String Variable + * : {0}", inputStr + "*");
+                break;
+        }
+    }
+}
