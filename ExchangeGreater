@@ -1,0 +1,32 @@
+/*
+Write an if statement that examines two integer variables and exchanges their values if the first one is greater than the second one.
+*/
+using System;
+
+class ExchangeGreater
+{
+    static void Main()
+    {
+        Console.Write("Vyvedete a=");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Vyvedete b=");
+        int b = int.Parse(Console.ReadLine());
+        if (a == b)
+        {
+            Console.WriteLine("Chislata sa ravni!");
+        }
+        else
+        {
+            int biggerNumber = a;
+            if (b > a)
+            {
+                biggerNumber = b;
+            }
+            Console.WriteLine("Po-golqmoto ot dvete chisla e:{0}", biggerNumber);
+            int temp = a;
+            a = b;
+            b = temp;
+            Console.WriteLine(" Chislata sled razmqnata sa: a={0}, b={1}", a, b);
+        }
+    }
+}
